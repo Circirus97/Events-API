@@ -19,7 +19,7 @@ public class EventService implements IEventService {
 
     private final EventRepository eventRepository;
     @Override
-    @SneakyThrows
+    @SneakyThrows //Extiende de Throws ayuda para las excepciones
     public Event save(Event event) {
 
         if (event.getDate().isBefore(LocalDate.now())) {
